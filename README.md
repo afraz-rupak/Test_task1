@@ -1,0 +1,8 @@
+Task 1:Describe how you set up and trained your model, and explain the parameters you chose and why.
+The model is constructed by stacking various layers on top of each other, with the output of one layer serving as the input for the next. Conv2D layers perform convolutions, using filters to transform specific regions of the image. The first two Conv2D layers employ 32 filters of size 5x5, while the subsequent two layers use 64 filters of size 3x3. These filters are applied across the entire image. MaxPool2D downsamples the image by reducing a 2x2 matrix to a single pixel, preserving essential features while reducing the image size. Dropout acts as a regularization layer, randomly ignoring 25% of the nodes in the layer. This encourages the network to learn diverse features, preventing overfitting. Relu, the rectifier activation function, introduces nonlinearity into the data. For input values greater than or equal to 0, it returns the input value; otherwise, it returns 0. Flatten reshapes the tensors into a 1D vector. The final layer outputs the probability of each image belonging to a particular class. Given that the model's goal is to classify images, the categorical_crossentropy loss function is employed.
+
+
+
+task 2: Explain how you organized your database and why you chose such a structure.
+SQLite i can easly do in my colab that why i cooshe it. It is a lightweight and serverless database engine, making it easy to set up and use for small-scale applications. The chosen structure for the 'users' table includes an 'id' (primary key) for unique identification, 'name' to store the user's name, and 'age' to store the user's age. This structure is a simple and common setup for storing user-related information.
+
